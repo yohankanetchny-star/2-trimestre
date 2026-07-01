@@ -1,51 +1,72 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" 
-    content="width=device-width, initial-scale=1.0">
-    <title>blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
     <style>
-    header {
-    background-color: #183C63;
-    color: #FFFFFF;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 16px;
-    border: 5px solid #cf1010;
-    }
+        header {
+            background-color: #183c63;
+            color: #FFFFFF;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+            border: 5px solid rgb(0, 0, 0);
+        }
 
-main {
-    header {
-    background-color: #183C63;
-    color: #FFFFFF;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 16px;
+        main {
+            background-color: #FFFFFF;
+            color: #183c63;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+            display: flex;
+        }
 
-    }
-}
-        
-img {
-    width: 80px;
-    height: 80px;
-}
+        img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .Artigo-Autor {
+            font-weight: bold;
+        }
     </style>
 </head>
-<body>
-    <main>
-    <h1>Meu blog tech</h1>
-    <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
-    </main>
-<header>
-    
-     <img src="imagem-blog.png" alt="logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
-    <h2>Meu primeiro post</h2>
-    <p>Por: Yohan s. k.</p>
-    <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
 
+<body>
+    <header>
+        <h1>Meu blog</h1>
+        <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
+    </header>
+    <main>
+
+        <img src="ImgTec.png" alt="Logotipo">
+        <div>
+            <h2>Meu Primeiro Post</h2>
+            <p class="Artigo-Autor">Por: Lucas</p>
+            <p>Boas-Vindas Ao Meu Novo Blog!</p>
+            <button>❤️ <span>0</span></button>
+            <button>👍 <span>0</span></button>
+        </div>
+
+    </main>
 </body>
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function (botao) {
+        botao.addEventListener("click", botaoClicado);
+
+        function botaoClicado() {
+            console.log("Botao Clicado");
+            let texto = botao.querySelector("span");
+            texto.textContent++;
+        }
+    })
+</script>
+
 </html>
